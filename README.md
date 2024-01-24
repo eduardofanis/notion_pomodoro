@@ -6,8 +6,9 @@ https://fwnis.github.io/notion_pomodoro/
 
 Dark Mode & Light Mode
 
-![image](https://github.com/fwnis/notion_pomodoro/assets/109631984/c0e4bb1e-ab6c-4337-8e36-89cf1bc496b7)
-![image](https://github.com/fwnis/notion_pomodoro/assets/109631984/c00978d0-d3cf-414b-99db-1fc885e5a661)
+![image](https://github.com/fwnis/notion_pomodoro/assets/109631984/23bb7eb1-b171-4c8d-9ff7-a3378faee90d)
+![image](https://github.com/fwnis/notion_pomodoro/assets/109631984/693b65bb-9fbb-4a8b-9c9c-29300a91bb02)
+
 
 
 Settings
