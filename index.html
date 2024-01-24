@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro for Notion</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <span class="text">Time to focus!</span>
+
+      <p class="timer">50:00</p>
+
+      <nav class="action-bar">
+        <button onclick="startPauseTimer()" class="start-button">
+          <i class="start-icon fa fa-play fa-lg"></i>
+        </button>
+        <button onclick="skipTimer()" class="skip-button">
+          <i class="fa fa-step-forward fa-lg"></i>
+        </button>
+        <button onclick="restartTimer()" class="restart-button">
+          <i class="fa fa-repeat fa-lg"></i>
+        </button>
+        <button onclick="toggleSettings()" class="settings-button">
+          <i class="fa fa-cog fa-lg"></i>
+        </button>
+      </nav>
+    </main>
+
+    <div class="settings settings-display">
+      <div class="settings-buttons">
+        <button onclick="toggleSettings()">
+          <i class="fa fa-times fa-lg"></i>
+        </button>
+        <button onclick="toggleSound()">
+          <i class="fa fa-volume-up fa-lg volume-button"></i>
+        </button>
+      </div>
+
+      <div class="settings-container">
+        <div>
+          <span>Light mode</span>
+          <label class="switch">
+            <input
+              type="checkbox"
+              onclick="toggleTheme()"
+              class="theme-switch"
+            />
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div>
+          <span>Focus duration</span>
+          <select
+            name="focus"
+            id="focus"
+            class="time-select"
+            onchange="handleFocusChange(this.value)"
+          >
+            <option value="focus-50">50 min</option>
+            <option value="focus-25">25 min</option>
+          </select>
+        </div>
+
+        <div>
+          <span>Break duration</span>
+          <select
+            name="breaks"
+            id="breaks"
+            class="time-select"
+            onchange="handleBreakChange(this.value)"
+          >
+            <option value="break-10">10 min</option>
+            <option value="break-5">5 min</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
