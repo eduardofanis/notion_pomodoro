@@ -19,10 +19,28 @@ function startPauseTimer() {
 }
 
 function startTimer() {
-  timerInterval = setInterval(updateTimer, 1000);
+  timerInterval = setInterval(updateTimer, 100);
   isRunning = true;
   document.querySelector(".start-icon").classList.add("fa-pause");
   document.querySelector(".start-icon").classList.remove("fa-play");
+
+  if (
+    (minutes == 50 &&
+      window.localStorage.getItem("focus-duration") !== "focus-25") ||
+    (minutes == 25 &&
+      window.localStorage.getItem("focus-duration") == "focus-25")
+  )
+    minutes--;
+
+  if (
+    (isBreakMode &&
+      minutes == 10 &&
+      window.localStorage.getItem("break-duration") !== "break-5") ||
+    (isBreakMode &&
+      minutes == 5 &&
+      window.localStorage.getItem("break-duration") == "break-5")
+  )
+    minutes--;
 }
 
 function pauseTimer() {
