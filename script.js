@@ -19,7 +19,7 @@ function startPauseTimer() {
 }
 
 function startTimer() {
-  timerInterval = setInterval(updateTimer, 100);
+  timerInterval = setInterval(updateTimer, 1000);
   isRunning = true;
   document.querySelector(".start-icon").classList.add("fa-pause");
   document.querySelector(".start-icon").classList.remove("fa-play");
