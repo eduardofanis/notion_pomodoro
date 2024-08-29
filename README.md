@@ -1,6 +1,6 @@
 Pomodoro Widget to use with Notion Embed URL
 
-https://fwnis.github.io/notion_pomodoro/
+https://eduardofanis.github.io/notion_pomodoro/
 
 ----
 
